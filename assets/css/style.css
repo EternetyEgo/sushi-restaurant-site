@@ -1256,3 +1256,122 @@ body .cursor.hovered {
     width: 205px;
   }
 }
+
+
+#cookie-overlay {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw; /* To‘liq ekranni qoplashi uchun */
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Yarim shaffof qora fon */
+  z-index: 998; /* Cookie banner (999) ostida bo‘lishi uchun */
+}
+
+#cookie-banner {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: #1e1e1e;
+  padding: 60px;
+  width: 90%;
+  max-width: 900px;
+  justify-content: space-between;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #0000004d;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.cookie-content {
+  width: 60%;
+}
+
+.cookie-content h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cookie-content p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.cookie-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#cookie-banner button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  width: 150px;
+  text-align: center;
+}
+
+.accept {
+  background-color: #007bff;
+  color: white;
+}
+
+.accept:hover {
+  background-color: #0056b3;
+}
+
+.reject {
+  background-color: #333;
+  color: white;
+}
+
+.reject:hover {
+  background-color: #555;
+}
+
+.settings {
+  background-color: transparent;
+  border: 1px solid #b3b3b3;
+  color: #b3b3b3;
+}
+
+.settings:hover {
+  border-color: white;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  #cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 95%;
+    padding: 20px;
+  }
+
+  .cookie-content {
+    width: 100%;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #cookie-banner button {
+    width: auto;
+    padding: 10px 120px;
+  }
+}
